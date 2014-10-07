@@ -1,0 +1,7 @@
+<h1><%= @reply.title %></h1>
+<p><%= @reply.body %></p>
+<small>Created @ <%= @reply.created_at %></small>
+
+
+<%= link_to 'Edit', edit_reply_path(@reply) %> |
+<%= link_to 'Back', replies_path %>

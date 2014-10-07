@@ -1,0 +1,15 @@
+<h3><%= @topic.title %></h3>
+<p><%= @topic.description %></p>
+
+<h4>Replies</h4>
+<%= link_to 'New Reply', new_topic_reply_path(@replies) %>
+<p><% @replies.each do |reply| %>
+		<%= reply.title %>
+		<%= reply.body %>
+		<br>
+		<% end %>
+</p>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
+
