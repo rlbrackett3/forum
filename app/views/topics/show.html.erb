@@ -3,7 +3,7 @@
 
 <h4>Replies</h4>
 <%= link_to 'New Reply', new_topic_reply_path(@replies) %>
-<p><% @replies.each do |reply| %>
+<p><% @replies.each do |reply| %> <!-- you can also access this from the topic: @topic.replies.each to avoid the mixing of domains in the controller -->
 		<%= reply.title %>
 		<%= reply.body %>
 		<br>
